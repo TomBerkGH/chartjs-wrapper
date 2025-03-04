@@ -14,7 +14,7 @@
 		},
 		"autoload": {
 				"psr-4": {
-						"TomVanDenBerk\\LaravelChartJsWrapper\\": "src/"
+						"TomVanDenBerk\\ChartJsWrapper\\": "src/"
 				}
 		}
 }
