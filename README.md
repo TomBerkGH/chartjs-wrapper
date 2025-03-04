@@ -1,2 +1,2 @@
-# laravel-chartjs-wrapper
+# chartjs-wrapper
 ChartJs data wrapper
