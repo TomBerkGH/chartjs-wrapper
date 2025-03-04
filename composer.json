@@ -1,6 +1,6 @@
 {
     "name": "tomvandenberk/chartjs-wrapper",
-    "description": "A laravel wrapper for ChartJs data.",
+    "description": "A wrapper for ChartJs data.",
     "type": "library",
     "license": "Unlicense",
     "authors": [
