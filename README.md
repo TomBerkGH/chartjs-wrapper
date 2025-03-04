@@ -13,3 +13,18 @@ return response()->json(new Data(
     ]
 )->addExtraValues('ids', $data->pluck('id')->toArray())->addExtraValues('person_ids', $data->pluck('person_id')->toArray()));
 ```
+
+```php
+return response()->json(
+    new Data($data->pluck('label')->toArray(), [
+        new DataSet($data->pluck('value')->toArray(), [
+            'backgroundColor' => $data->pluck('color'),
+        ]),
+        new DataSet($data->pluck('target')->toArray(), [
+            'label' => 'general.target',
+            'backgroundColor' => '#808080',
+            'borderColor' => '#808080',
+        ]),
+    ])->addExtraValues('ids', $data->pluck('id')->toArray())
+);
+```
