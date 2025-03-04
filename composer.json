@@ -5,12 +5,12 @@
 		"license": "Unlicense",
 		"authors": [
 				{
-						"name": "Tom van den Berk",
+						"name": "Tom van den Berk | VDB-IT",
 						"email": "tom.berk@vdb-it.nl"
 				}
 		],
 		"require": {
-				"php": ">=8.0"
+				"php": ">=8.3"
 		},
 		"autoload": {
 				"psr-4": {
