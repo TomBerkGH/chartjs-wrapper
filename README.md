@@ -91,3 +91,14 @@ output can be directly used in ChartJS
     ]
 }
 ```
+
+```javascript
+new Chart(document.getElementById('chart'), {
+    type: 'line',
+    data: @json($chart_data),
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+    }
+});
+```
