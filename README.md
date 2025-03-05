@@ -15,18 +15,14 @@ return response()->json(new Data(
 ```
 
 ```php
-return response()->json(
-    new Data($data->pluck('label')->toArray(), [
-        new DataSet($data->pluck('value')->toArray(), [
-            'backgroundColor' => $data->pluck('color'),
-        ]),
-        new DataSet($data->pluck('target')->toArray(), [
-            'label' => 'general.target',
-            'backgroundColor' => '#808080',
-            'borderColor' => '#808080',
-        ]),
-    ])->addExtraValues('ids', $data->pluck('id')->toArray())
-);
+$datasets = [];
+$items->each(function ($item) use (&$datasets, $weeks) {
+    $datasets[] = new DataSet($item->pluck('total_hours')->toArray(), [
+        'label' => $item->pluck('person')->first() ?? '',
+    ])->withColorsBasedOnLabel();
+});
+
+return response()->json(new Data($weeks, $datasets));
 ```
 
 output can be directly used in ChartJS
